@@ -95,9 +95,9 @@ analytics:
 author:
   name             : "용은재 (Blake Yong)"
   avatar           : "/assets/images/profile.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  bio              : "I'm **Yong Eun-jae**, a developer who dreams of becoming an **AI full-stack developer**."
+  location         : "Republic of Korea"
+  email            : "**swejyong@naver.com**"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"

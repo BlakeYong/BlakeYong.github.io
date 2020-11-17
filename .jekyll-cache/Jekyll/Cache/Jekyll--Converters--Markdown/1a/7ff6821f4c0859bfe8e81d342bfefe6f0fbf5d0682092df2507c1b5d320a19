@@ -1,0 +1,78 @@
+I"@<p>#FastApi 특징</p>
+<ul>
+  <li>굉장히 빠른 프레임워크</li>
+  <li>개발 문서의 지원 (docs)</li>
+  <li>공식 문서의 정리가 잘 되어있음</li>
+</ul>
+
+<p><a href="https://fastapi.tiangolo.com/" title="fastApi 공식 문서 접속하기." style="text-decoration:none"> <font size="3px" color="gray">이외에는 공식 문서를 통해 확인하시길 바랍니다 ( 이 글을 클릭하면 공식문서로 이동합니다. )</font></a></p>
+
+<h2 id="fastapi-설치">fastApi 설치</h2>
+<p>fastApi 설치</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>pip <span class="nb">install </span>fastapi
+<span class="nv">$ </span>pip <span class="nb">install </span>uvicorn
+</code></pre></div></div>
+<font size="3px">저희가 사용하려는 프레임워크 <b>fastApi</b>와 서버를 실행할 때 사용하는 <b>uvicorn</b>을 설치해줍니다.</font>
+
+<h2 id="pycharm-인터프린터-설정-및-컴파일-파라미터-설정">pycharm 인터프린터 설정 및 컴파일 파라미터 설정</h2>
+<font size="3px">웹 서버를 열때마다 명령어를 치는것은 비효율적이므로 저희는 파이참 설정을 미리 하겠습니다.
+  우선	Run, Compile 버튼 왼쪽에 있는 인터프린터 설정 탭을 누른 후 <b>Edit Configurations...</b>을 클릭해줍니다.
+</font>
+<p><br />
+<img src="/assets/images/parameterSetting.png" alt="" /></p>
+
+<font size="3px">이후 위 사진을 참고하여 Script Path에 본인의 uvicorn 설치 경로를 입력해주고 parameter에 본인이 서버를 열 때 원하는 옵션을 입력해줍니다. 옵션은 다음과 같습니다.</font>
+<ul>
+  <li>
+    <font size="3px"><b>main</b> : 서버를 실행할 때 사용하는 FastApi를 호출한 python 이름입니다. 저는 main.py 입니다.</font>
+  </li>
+  <li>
+    <font size="3px"><b>app</b> : FastAPI()를 호출하여 담은 변수명입니다 전 app=FastAPI() 이므로 app으로 사용합니다.</font>
+  </li>
+  <li>
+    <font size="3px"><b>--reload</b> : 코드가 변경 될 때마다 서버 재실행 (개발서버에서는 사용되오나 운영에서는 &nbsp; 절대 사용해서는 안됩니다.)</font>
+  </li>
+  <li>
+    <font size="3px"><b>--host</b> : 서버를 열 때 사용할 IP를 입력해줍니다.</font>
+  </li>
+  <li>
+    <font size="3px"><b>--port</b> : 서버를 열 때 사용할 port를 입력해줍니다.</font>
+  </li>
+  <li>
+    <font size="3px"><b>--workers</b> : 서버에서 동시에 몇개의 업무까지 처리하게 할지 정합니다.</font>
+  </li>
+</ul>
+<font size="3px">파이참이나 파라미터 설정을 미리 안한다면 서버를 켤때마다 콘솔창에서 아래 명령어를 입력해주면 됩니다.</font>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>uvicorn main:app <span class="nt">--host</span> 0.0.0.0 <span class="nt">--port</span> 2052
+</code></pre></div></div>
+
+<font size="3px">이제 준비가 되었으니 간단하게 get 요청을 반환하는 서버를 열어봅시다!</font>
+<h2 id="웹-서버-실행">웹 서버 실행</h2>
+<p><br /></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>       <span class="c1">### main.py
+</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">(</span><span class="n">openapi_url</span><span class="o">=</span><span class="s">"/api/v1/openapi.json"</span><span class="p">,</span> <span class="n">docs_url</span><span class="o">=</span><span class="s">"/blakeDocs"</span><span class="p">,</span> <span class="n">redoc_url</span><span class="o">=</span><span class="s">"/readDocs"</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">getRoot</span><span class="p">():</span>
+	<span class="k">return</span> <span class="p">{</span> <span class="s">"message"</span> <span class="p">:</span> <span class="s">"Hello World"</span> <span class="p">}</span>
+	
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"/{name}"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">getName</span><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+	<span class="k">return</span> <span class="p">{</span> <span class="s">"message"</span> <span class="p">:</span> <span class="n">name</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<font size="3px">이제 준비가 되었으니 간단하게 get 요청을 반환하는 서버를 열어봅시다! 위 코드를 입력후 본인이 연 ip와 port를 입력시 HelloWorld가 출력됩니다! 쿼리로 이름을 받아 그대로 반환하는 함수도 간단하게 만들어봤는데요! 자세한 설명은 다음포스트에서 하도록 하겠습니다.</font>
+<p><img src="/assets/images/helloWorld.png" alt="HelloWorld" /> <img src="/assets/images/getName.png" alt="이름반환" /></p>
+
+<font size="3px">FastAPI의 강력한 장점 중 하나인 개발문서 지원도 FastAPI를 호출하는 부분에서 docs_url 파라미터로 지정한 엔드포인트를 통해 사용하실 수 있습니다!</font>
+<p><img src="/assets/images/docs.png" alt="" />
+<br /></p>
+<font size="3px">마찬가지로 읽기전용 Docs도 사용 가능합니다!</font>
+<p><img src="/assets/images/redcDocs.png" alt="" /></p>
+<font size="3px">오늘 FastAPI의 기본적인 셋팅과 Docs를 간단하게 사용해보았는데요, FastAPI사용 참 쉽죠?! 다음 포스트엔 더 자세한 코드 설명과 프레임워크 사용법을 알려드리도록 하겠습니다!!
+</font>
+<p><br /></p>
+<font size="3px" style="text-align:right;">글쓴이 
+</font>
+:ET

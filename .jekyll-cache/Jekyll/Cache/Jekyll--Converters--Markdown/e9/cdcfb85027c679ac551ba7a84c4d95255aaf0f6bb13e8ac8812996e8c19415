@@ -1,0 +1,14 @@
+I"/<p>#FastApi 특징</p>
+<ul>
+  <li>굉장히 빠른 프레임워크</li>
+  <li>개발 문서의 지원 (docs)</li>
+  <li>공식 문서의 정리가 잘 되어있음<br />
+<a href="https://fastapi.tiangolo.com/"></a></li>
+</ul>
+<font size="15px">이외에는 공식 문서를 통해 확인하시길 바랍니다</font>
+<p>&lt;/a&gt;
+<a href="https://fastapi.tiangolo.com/" title="fastApi 공식 문서 접속하기.">이외에는 공식 문서를 통해 확인하시길 바랍니다.</a><br />
+<br />
+```python
+from fastapi import FastAPI       ### main.py</p>
+:ET

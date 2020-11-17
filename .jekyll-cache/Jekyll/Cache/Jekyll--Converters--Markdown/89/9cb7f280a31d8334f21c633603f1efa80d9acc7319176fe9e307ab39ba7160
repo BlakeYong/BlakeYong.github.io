@@ -1,0 +1,9 @@
+I"�<hr />
+<p>title: Posts by Category
+layout: categories
+permalink: “/tags/”
+author_profile: true
+—</p>
+
+<p><a href="http://127.0.0.1:4000/test-post/">testpage</a></p>
+:ET

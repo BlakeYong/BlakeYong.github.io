@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap:https://jamieyong.github.io/sitemap.xml

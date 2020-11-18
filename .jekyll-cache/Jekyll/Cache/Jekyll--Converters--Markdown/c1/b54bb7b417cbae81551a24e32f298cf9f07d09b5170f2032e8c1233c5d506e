@@ -1,11 +1,0 @@
-I"�<p><em>fast api의 특징들은 다른 블로그에서 기술해놓았으므로 생략한다.</em></p>
-
-<p><a href="https://naver.com" title="링크 설명(title)을 작성하세요.">NAVER</a></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s</span> <span class="o">=</span> <span class="s">"Test"</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>문서 안에서 <a href="https://naver.com" title="네이버로 이동합니다!">참조 링크</a>를 그대로 사용할 수도 있습니다.</p>
-
-:ET

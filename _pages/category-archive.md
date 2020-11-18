@@ -5,4 +5,3 @@ permalink: "/categories/"
 author_profile: true
 ---
 
-[testpage](http://127.0.0.1:4000/test-post/)

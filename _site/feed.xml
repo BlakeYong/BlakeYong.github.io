@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-18T21:49:50+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jamie’s development blog</title><subtitle>An amazing website.</subtitle><author><name>Jamie Yong (용은재)</name><email>swejyong@naver.com</email></author><entry><title type="html">FastApi 웹서버 준비하기</title><link href="http://localhost:4000/python(webserver)/test-post/" rel="alternate" type="text/html" title="FastApi 웹서버 준비하기" /><published>2020-09-29T00:00:00+09:00</published><updated>2020-11-18T21:21:00+09:00</updated><id>http://localhost:4000/python(webserver)/test-post</id><content type="html" xml:base="http://localhost:4000/python(webserver)/test-post/">&lt;p&gt;#FastApi 특징&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-18T21:53:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jamie’s development blog</title><subtitle>An amazing website.</subtitle><author><name>Jamie Yong (용은재)</name><email>swejyong@naver.com</email></author><entry><title type="html">FastApi 웹서버 준비하기</title><link href="http://localhost:4000/python(webserver)/test-post/" rel="alternate" type="text/html" title="FastApi 웹서버 준비하기" /><published>2020-09-29T00:00:00+09:00</published><updated>2020-11-18T21:21:00+09:00</updated><id>http://localhost:4000/python(webserver)/test-post</id><content type="html" xml:base="http://localhost:4000/python(webserver)/test-post/">&lt;p&gt;#FastApi 특징&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;굉장히 빠른 프레임워크&lt;/li&gt;
   &lt;li&gt;개발 문서의 지원 (docs)&lt;/li&gt;
@@ -62,15 +62,15 @@
 	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;font size=&quot;3px&quot;&gt;이제 준비가 되었으니 간단하게 get 요청을 반환하는 서버를 열어봅시다! 위 코드를 입력후 본인이 연 ip와 port를 입력시 HelloWorld가 출력됩니다! 쿼리로 이름을 받아 그대로 반환하는 함수도 간단하게 만들어봤는데요! 자세한 설명은 다음포스트에서 하도록 하겠습니다.&lt;/font&gt;
+&lt;font size=&quot;3px&quot;&gt;이제 준비가 되었으니 간단하게 get 요청을 반환하는 서버를 열어봅시다! 위 코드를 입력후 본인이 연 ip와 port를 입력시 HelloWorld가 출력됩니다! 쿼리로 이름을 받아 그대로 반환하는 함수도 간단하게 만들어봤습니다. 자세한 설명은 다음포스트에서 하도록 하겠습니다.&lt;/font&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/images/helloWorld.png&quot; alt=&quot;HelloWorld&quot; /&gt; &lt;img src=&quot;/assets/images/getName.png&quot; alt=&quot;이름반환&quot; /&gt;&lt;/p&gt;
 
-&lt;font size=&quot;3px&quot;&gt;FastAPI의 강력한 장점 중 하나인 개발문서 지원도 FastAPI를 호출하는 부분에서 docs_url 파라미터로 지정한 엔드포인트를 통해 사용하실 수 있습니다!&lt;/font&gt;
+&lt;font size=&quot;3px&quot;&gt;FastAPI의 강력한 장점 중 하나인 개발문서 지원도 FastAPI를 호출하는 부분에서 docs_url 파라미터로 지정한 엔드포인트를 통해 사용하실 수 있습니다.&lt;/font&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/images/docs.png&quot; alt=&quot;&quot; /&gt;
 &lt;br /&gt;&lt;/p&gt;
-&lt;font size=&quot;3px&quot;&gt;마찬가지로 읽기전용 Docs도 사용 가능합니다!&lt;/font&gt;
+&lt;font size=&quot;3px&quot;&gt;마찬가지로 읽기전용 Docs도 사용 가능합니다.&lt;/font&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/images/redcDocs.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;font size=&quot;3px&quot;&gt;오늘 FastAPI의 기본적인 셋팅과 Docs를 간단하게 사용해보았는데요, FastAPI사용 참 쉽죠?! 다음 포스트엔 더 자세한 코드 설명과 프레임워크 사용법을 알려드리도록 하겠습니다!!
+&lt;font size=&quot;3px&quot;&gt;오늘 FastAPI의 기본적인 셋팅과 Docs를 간단하게 사용해보았습니다. 다음 포스트엔 FastAPI에 대한 더 자세한 코드 설명과 프레임워크 사용법을 알려드리도록 하겠습니다!!
 &lt;/font&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;div style=&quot;text-align:right;&quot;&gt;&lt;font size=&quot;3px&quot;&gt;글쓴이 - 용은재 ( Jamie Yong ) AI/백엔드 개발자 1년차
